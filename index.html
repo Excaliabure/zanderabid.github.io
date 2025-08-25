@@ -1,1 +1,259 @@
-Hello world
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Engineering Projects</title>
+  <style>
+    /* Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #e3f2fd, #f7f9fc);
+      color: #333;
+      padding: 40px 60px;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: #222;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #555;
+    }
+
+    section.project {
+      background-color: #fff;
+      padding: 25px 30px;
+      margin-bottom: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: box-shadow 0.2s ease;
+    }
+
+    section.project:hover {
+      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    }
+
+    /* Flex container for project content and image */
+    .project-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .project-text {
+      flex: 1;
+    }
+
+    .project-image {
+      flex: 1;
+      max-width: 300px; /* control image max width */
+    }
+
+    .project-image img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    section.project h2 {
+      font-size: 1.6rem;
+      color: #222;
+      margin-bottom: 12px;
+    }
+
+    section.project p.description {
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 18px;
+    }
+
+    .btn-download {
+      background-color: #007acc;
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: 25px;
+      font-weight: 600;
+      font-size: 1rem;
+      border: none;
+      cursor: pointer;
+      margin-right: 12px;
+      text-decoration: none;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-download:hover {
+      background-color: #005fa3;
+    }
+
+    /* Contact Section */
+    section.contact {
+      max-width: 600px;
+      margin: 60px auto 0;
+      background-color: #fff;
+      padding: 25px 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    section.contact h2 {
+      font-size: 1.8rem;
+      color: #222;
+      margin-bottom: 15px;
+    }
+
+    section.contact p {
+      font-size: 1.1rem;
+      color: #555;
+      margin-bottom: 10px;
+    }
+
+    section.contact a {
+      color: #007acc;
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    section.contact a:hover {
+      color: #005fa3;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      body {
+        padding: 20px 30px;
+      }
+
+      section.project {
+        padding: 20px 25px;
+      }
+
+      .btn-download {
+        margin-bottom: 10px;
+        margin-right: 0;
+        display: block;
+        width: 100%;
+        text-align: center;
+      }
+
+      /* Stack project content vertically on small screens */
+      .project-content {
+        flex-direction: column;
+      }
+
+      .project-image {
+        max-width: 100%;
+        margin-top: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Zander Abid</h1>
+    <p>A showcase of my work, skills, and contributions</p>
+  </header>
+
+  <!-- Project 1 -->
+  <section class="project" id="project1">
+    <div class="project-content">
+      <div class="project-text">
+        <h2>Space Dynamics Laboratory</h2>
+        <p class="description">
+          <!-- Add your project description here -->
+        </p>
+        <a href="files/project-alpha-design.pdf" download class="btn-download">Download Presnetation</a>
+        <a href="files/project-alpha-code.zip" download class="btn-download">Download Associated Documents</a>
+      </div>
+      <div class="project-image">
+        <img src="images/cube-satellite.jpg" alt="Cube Satellite" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Project 2 -->
+  <section class="project" id="project2">
+    <div class="project-content">
+      <div class="project-text">
+        <h2></h2>
+        <p class="description">
+          American Institute of Aeronautics and Asteronautics
+        </p>
+        <a href="files/project-beta-presentation.pdf" download class="btn-download">Download Presentation</a>
+        <a href="files/project-beta-source.zip" download class="btn-download">Download Source</a>
+        <a href="files/project-beta-readme.txt" download class="btn-download">Download README</a>
+        <a href="https://github.com/yourusername/project-beta" target="_blank" rel="noopener" class="btn-download">View on GitHub</a>
+      </div>
+      <div class="project-image">
+        <img src="images/project-beta-dashboard.png" alt="Cloud Monitoring Dashboard" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Project 3 -->
+  <section class="project" id="project3">
+    <div class="project-content">
+      <div class="project-text">
+        <h2>Overlapping Path Partitions</h2>
+        <p class="description">
+          Built and trained a predictive ML model using Python and TensorFlow to forecast sales trends.
+        </p>
+        <a href="files/project-gamma-report.pdf" download class="btn-download">Download Report</a>
+        <a href="https://github.com/cdiazalvarenga/overlapping_partition/tree/milp/student_work" target="_blank" rel="noopener" class="btn-download">Go To Code</a>
+      </div>
+      <div class="project-image">
+        <img src="images/project-gamma-ml.png" alt="Overlapping Path Partitions" />
+      </div>
+    </div>
+  </section>
+
+    <!-- Project 4 -->
+  <section class="project" id="project2">
+    <div class="project-content">
+      <div class="project-text">
+        <h2>Cube Satellite</h2>
+        <p class="description">
+          <!-- Add your project description here -->
+        </p>
+        <a href="files/project-alpha-design.pdf" download class="btn-download">Download Design Doc</a>
+        <a href="files/project-alpha-code.zip" download class="btn-download">Download Code</a>
+      </div>
+      <div class="project-image">
+        <img src="images/cube-satellite.jpg" alt="Cube Satellite" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:zabid@ucmerced.edu">zabid@ucmerced.edu</a></p>
+    <p>Phone: <a href="tel:+13104868752">+1 (310) 486-8752</a></p>
+    <p>Carrier Pigeon: <a href="https://maps.app.goo.gl/Wn86rh35DjWRnYe3A" target="_blank" rel="noopener">Location</a></p>
+  </section>
+
+</body>
+</html>
