@@ -23,7 +23,7 @@
 
     header {
       text-align: center;
-      margin-bottom: 50px;
+      margin-bottom: 30px;
     }
 
     header h1 {
@@ -36,6 +36,33 @@
     header p {
       font-size: 1.2rem;
       color: #555;
+    }
+
+    /* Acronym Legend */
+    section.legend {
+      background-color: #ffffff;
+      border-left: 6px solid #007acc;
+      padding: 20px 25px;
+      margin-bottom: 40px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    section.legend h3 {
+      font-size: 1.4rem;
+      color: #007acc;
+      margin-bottom: 10px;
+    }
+
+    section.legend ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    section.legend li {
+      margin-bottom: 6px;
+      font-size: 1rem;
+      color: #444;
     }
 
     section.project {
@@ -51,7 +78,6 @@
       box-shadow: 0 6px 15px rgba(0,0,0,0.15);
     }
 
-    /* Flex container for project content and image */
     .project-content {
       display: flex;
       align-items: center;
@@ -65,7 +91,7 @@
 
     .project-image {
       flex: 1;
-      max-width: 300px; /* control image max width */
+      max-width: 300px;
     }
 
     .project-image img {
@@ -106,7 +132,6 @@
       background-color: #005fa3;
     }
 
-    /* Contact Section */
     section.contact {
       max-width: 600px;
       margin: 60px auto 0;
@@ -140,7 +165,6 @@
       color: #005fa3;
     }
 
-    /* Responsive */
     @media (max-width: 768px) {
       body {
         padding: 20px 30px;
@@ -158,7 +182,6 @@
         text-align: center;
       }
 
-      /* Stack project content vertically on small screens */
       .project-content {
         flex-direction: column;
       }
@@ -177,41 +200,82 @@
     <p>A showcase of my work, skills, and contributions</p>
   </header>
 
+  <!-- Legend for Acronyms -->
+  <section class="legend">
+    <h3>Acronym Legend</h3>
+    <ul>
+      <li><strong>AIAA</strong> – American Institute of Aeronautics and Astronautics</li>
+      <li><strong>DBF</strong> – Design Build Fly</li>
+      <li><strong>SDL</strong> – Space Dynamics Laboratory</li>
+      <li><strong>ML</strong> – Machine Learning</li>
+      <li><strong>UCM</strong> – University of California, Merced</li>
+    </ul>
+  </section>
+
+
+  
   <!-- Project 1 -->
   <section class="project" id="project1">
     <div class="project-content">
       <div class="project-text">
-        <h2>Space Dynamics Laboratory</h2>
+        <h2>University Nanosatellite Program (Space Dynamics Laboratory)</h2>
         <p class="description">
           <!-- Add your project description here -->
+
+          Worked on schools Cube Satellite at a joint partnership with NASA and AFRL through the SDL.
+
         </p>
-        <a href="files/project-alpha-design.pdf" download class="btn-download">Download Presnetation</a>
-        <a href="files/project-alpha-code.zip" download class="btn-download">Download Associated Documents</a>
+        <a href="files/SDL/MC2025_FinalEvent_UCMerced.pptx" download class="btn-download">Download Presetation</a>
+        <a href="files\SDL\BOBSAT.zip" download class="btn-download">Download Associated Documents</a>
       </div>
       <div class="project-image">
-        <img src="images/cube-satellite.jpg" alt="Cube Satellite" />
+        <img src="images/cube-satellite.jpg" alt="Images Coming Soon" />
       </div>
     </div>
   </section>
+     
+  
+  <!-- Project 2.1 -->
+  <section class="project" id="project3">
+    <div class="project-content">
+      <div class="project-text">
+        <h2>Cube Satellite (AIAA)</h2>
+        <p class="description">
+          Authored proposal to start the cube satellite team on the UCM campus  
+        </p>
+        <!-- <a href="files/project-beta-presentation.pdf" download class="btn-download">Download Presentation</a> -->
+        <!-- <a href="files/project-beta-source.zip" download class="btn-download">Download Source</a>
+        <a href="files/project-beta-readme.txt" download class="btn-download">Download README</a>
+        <a href="https://github.com/yourusername/project-beta" target="_blank" rel="noopener" class="btn-download">View on GitHub</a> -->
+      </div>
+      <div class="project-image">
+        <img src="images/project-beta-dashboard.png" alt="Images Coming Soon" />
+      </div>
+    </div>
+  </section>
+
+
 
   <!-- Project 2 -->
   <section class="project" id="project2">
     <div class="project-content">
       <div class="project-text">
-        <h2></h2>
+        <h2>Design Build Fly (AIAA)</h2>
         <p class="description">
-          American Institute of Aeronautics and Asteronautics
+          American Institute of Aeronautics and Asteronautics Design Build Fly Competition 2026
         </p>
-        <a href="files/project-beta-presentation.pdf" download class="btn-download">Download Presentation</a>
-        <a href="files/project-beta-source.zip" download class="btn-download">Download Source</a>
+        <!-- <a href="files/project-beta-presentation.pdf" download class="btn-download">Download Presentation</a> -->
+        <!-- <a href="files/project-beta-source.zip" download class="btn-download">Download Source</a>
         <a href="files/project-beta-readme.txt" download class="btn-download">Download README</a>
-        <a href="https://github.com/yourusername/project-beta" target="_blank" rel="noopener" class="btn-download">View on GitHub</a>
+        <a href="https://github.com/yourusername/project-beta" target="_blank" rel="noopener" class="btn-download">View on GitHub</a> -->
       </div>
       <div class="project-image">
-        <img src="images/project-beta-dashboard.png" alt="Cloud Monitoring Dashboard" />
+        <img src="images/project-beta-dashboard.png" alt="Images Coming Soon" />
       </div>
     </div>
   </section>
+
+  
 
   <!-- Project 3 -->
   <section class="project" id="project3">
@@ -221,28 +285,80 @@
         <p class="description">
           Built and trained a predictive ML model using Python and TensorFlow to forecast sales trends.
         </p>
-        <a href="files/project-gamma-report.pdf" download class="btn-download">Download Report</a>
-        <a href="https://github.com/cdiazalvarenga/overlapping_partition/tree/milp/student_work" target="_blank" rel="noopener" class="btn-download">Go To Code</a>
+        <!-- <a href="files/project-gamma-report.pdf" download class="btn-download">Download Report</a>
+        <a href="https://github.com/cdiazalvarenga/overlapping_partition/tree/milp/student_work" target="_blank" rel="noopener" class="btn-download">Go To Code</a> -->
       </div>
       <div class="project-image">
-        <img src="images/project-gamma-ml.png" alt="Overlapping Path Partitions" />
+        <img src="images/project-gamma-ml.png" alt="Images Coming Soon" />
       </div>
     </div>
   </section>
 
-    <!-- Project 4 -->
-  <section class="project" id="project2">
+
+    <!-- Project 3 -->
+  <section class="project" id="project3">
     <div class="project-content">
       <div class="project-text">
-        <h2>Cube Satellite</h2>
+        <h2>Foreign Exchange</h2>
         <p class="description">
-          <!-- Add your project description here -->
+          Built and trained a predictive ML model using Python and TensorFlow to forecast sales trends.
         </p>
-        <a href="files/project-alpha-design.pdf" download class="btn-download">Download Design Doc</a>
-        <a href="files/project-alpha-code.zip" download class="btn-download">Download Code</a>
+        <!-- <a href="files/project-gamma-report.pdf" download class="btn-download">Download Report</a>
+        <a href="https://github.com/cdiazalvarenga/overlapping_partition/tree/milp/student_work" target="_blank" rel="noopener" class="btn-download">Go To Code</a> -->
       </div>
       <div class="project-image">
-        <img src="images/cube-satellite.jpg" alt="Cube Satellite" />
+        <img src="images/project-gamma-ml.png" alt="Images Coming Soon" />
+      </div>
+    </div>
+  </section>
+
+    <!-- Project 3 -->
+  <section class="project" id="project3">
+    <div class="project-content">
+      <div class="project-text">
+        <h2>Water Hacks Hackathon</h2>
+        <p class="description">
+          Built and trained a predictive ML model using Python and TensorFlow to forecast sales trends.
+        </p>
+        <!-- <a href="files/project-gamma-report.pdf" download class="btn-download">Download Report</a>
+        <a href="https://github.com/cdiazalvarenga/overlapping_partition/tree/milp/student_work" target="_blank" rel="noopener" class="btn-download">Go To Code</a> -->
+      </div>
+      <div class="project-image">
+        <img src="images/project-gamma-ml.png" alt="Images Coming Soon" />
+      </div>
+    </div>
+  </section>
+
+    <!-- Project 3 -->
+  <section class="project" id="project3">
+    <div class="project-content">
+      <div class="project-text">
+        <h2>Kaggle Competitions</h2>
+        <p class="description">
+          Built and trained a predictive ML model using Python and TensorFlow to forecast sales trends.
+        </p>
+        <!-- <a href="files/project-gamma-report.pdf" download class="btn-download">Download Report</a>
+        <a href="https://github.com/cdiazalvarenga/overlapping_partition/tree/milp/student_work" target="_blank" rel="noopener" class="btn-download">Go To Code</a> -->
+      </div>
+      <div class="project-image">
+        <img src="images/project-gamma-ml.png" alt="Images Coming Soon" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Project 3 -->
+  <section class="project" id="project3">
+    <div class="project-content">
+      <div class="project-text">
+        <h2>Visibly Hackathon</h2>
+        <p class="description">
+          Built and trained a predictive ML model using Python and TensorFlow to forecast sales trends.
+        </p>
+        <!-- <a href="files/project-gamma-report.pdf" download class="btn-download">Download Report</a>
+        <a href="https://github.com/cdiazalvarenga/overlapping_partition/tree/milp/student_work" target="_blank" rel="noopener" class="btn-download">Go To Code</a> -->
+      </div>
+      <div class="project-image">
+        <img src="images/project-gamma-ml.png" alt="Images Coming Soon" />
       </div>
     </div>
   </section>
