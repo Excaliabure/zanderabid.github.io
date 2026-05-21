@@ -1,375 +1,924 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>My Engineering Projects</title>
-  <style>
-    /* Basic Reset */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zander Abid - Mathematician</title>
+<style>
 
-    body {
-      background: linear-gradient(135deg, #e3f2fd, #f7f9fc);
-      color: #333;
-      padding: 40px 60px;
-      line-height: 1.6;
-      min-height: 100vh;
-    }
+/* ============================================================
+   GLOBAL RESET & BASE STYLES
+   ============================================================ */
+body {
+  background: #c0c0c0;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 20px;
+}
+a { color: #00c; }
+a:visited { color: #800080; }
+a:hover { color: #f00; }
+table { border-collapse: collapse; }
 
-    header {
-      text-align: center;
-      margin-bottom: 30px;
-    }
+.main-table {
+  width: 780px;
+  margin: 0 auto;
+  background: #fff;
+  border: 3px ridge #808080;
+}
 
-    header h1 {
-      font-size: 2.8rem;
-      font-weight: 700;
-      color: #222;
-      margin-bottom: 8px;
-    }
+/* ============================================================
+   HEADER — name, contact info, subtitle
+   ============================================================ */
+.header-cell {
+  background: #000;
+  color: #fff;
+  padding: 16px 20px;
+}
+.header-cell h1 {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 0;
+  font-family: 'Arial', 'Helvetica', sans-serif;
+}
+.header-cell .sub {
+  font-size: 12px;
+  color: #ccc;
+  font-family: 'Arial', 'Helvetica', sans-serif;
+  margin-top: 2px;
+}
 
-    header p {
-      font-size: 1.2rem;
-      color: #555;
-    }
+/* ============================================================
+   NAVIGATION BAR — section links
+   ============================================================ */
+.nav-cell {
+  background: #dfdfdf;
+  border-bottom: 2px groove #808080;
+  padding: 6px 20px;
+}
+.nav-cell a {
+  font-family: 'Arial', 'Helvetica', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  color: #000;
+  text-decoration: none;
+  margin-right: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.nav-cell a:hover { color: #00c; text-decoration: underline; }
 
-    /* Acronym Legend */
-    section.legend {
-      background-color: #ffffff;
-      border-left: 6px solid #007acc;
-      padding: 20px 25px;
-      margin-bottom: 40px;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
+/* ============================================================
+   CONTENT LAYOUT & SECTION HEADERS
+   ============================================================ */
+.content { padding: 20px; }
+.section-title {
+  font-family: 'Arial', 'Helvetica', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #000;
+  border-bottom: 2px solid #000;
+  padding-bottom: 2px;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.section-sub {
+  font-size: 12px;
+  color: #444;
+  margin-bottom: 16px;
+}
 
-    section.legend h3 {
-      font-size: 1.4rem;
-      color: #007acc;
-      margin-bottom: 10px;
-    }
+/* ============================================================
+   ABOUT SECTION — profile photo, bio text, stats box
+   ============================================================ */
+.about-table { width: 100%; }
+.about-table td {
+  vertical-align: top;
+  padding: 4px 12px 4px 0;
+}
+.about-text { font-size: 14px; line-height: 1.6; color: #222; }
+.about-text p { margin-bottom: 8px; }
+.proj-sep {
+  height: 12px;
+}
+.stats-box {
+  border: 2px ridge #808080;
+  background: #f5f5f5;
+  padding: 0;
+  width: 220px;
+}
+.stats-box td {
+  padding: 8px 12px;
+  border-bottom: 1px solid #ccc;
+  font-size: 12px;
+}
+.stats-box tr:last-child td { border-bottom: none; }
+.stats-num {
+  font-family: 'Arial', 'Helvetica', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #000;
+}
+.stats-lbl { color: #444; padding-left: 8px; }
 
-    section.legend ul {
-      list-style-type: none;
-      padding-left: 0;
-    }
+/* ============================================================
+   SKILLS SECTION — categorized two-column table
+   ============================================================ */
+.skills-table { width: 100%; border: 2px ridge #808080; background: #f5f5f5; }
+.skills-table td {
+  padding: 10px 14px;
+  vertical-align: top;
+  width: 50%;
+  border-right: 1px solid #ccc;
+}
+.skills-table td:last-child { border-right: none; }
+.skill-cat {
+  font-family: 'Arial', 'Helvetica', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #666;
+  margin-bottom: 6px;
+  letter-spacing: 0.5px;
+}
+.skill-items { font-size: 13px; color: #222; line-height: 1.8; }
 
-    section.legend li {
-      margin-bottom: 6px;
-      font-size: 1rem;
-      color: #444;
-    }
+/* ============================================================
+   PROJECTS — clickable card grid with thumbnails
+   ============================================================ */
+.projects-table { width: 100%; }
+.projects-table td {
+  width: 33.33%;
+  padding: 6px;
+  vertical-align: top;
+}
+.proj-card {
+  border: 2px ridge #808080;
+  background: #fafafa;
+  cursor: pointer;
+  height: 100%;
+}
+.proj-card:hover { background: #f0f0f0; }
+.proj-thumb {
+  background: #e0e0e0;
+  border-bottom: 2px groove #808080;
+  height: 120px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.proj-thumb img { width: 100%; height: 100%; object-fit: cover; }
+.proj-thumb .ph {
+  font-family: 'Arial', 'Helvetica', sans-serif;
+  font-size: 11px;
+  color: #888;
+  text-align: center;
+  padding: 10px;
+}
+.proj-info { padding: 8px 10px; }
+.proj-title {
+  font-family: 'Arial', 'Helvetica', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+.proj-meta { font-size: 11px; color: #666; margin-bottom: 4px; }
+.proj-desc { font-size: 12px; color: #333; line-height: 1.5; }
+.proj-tags { margin-top: 6px; }
+.profile-photo {
+  border: 3px ridge #808080;
+  background: #dfdfdf;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.profile-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.profile-photo .ph-text {
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  color: #888;
+  text-align: center;
+  padding: 10px;
+}
 
-    section.project {
-      background-color: #fff;
-      padding: 25px 30px;
-      margin-bottom: 30px;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      transition: box-shadow 0.2s ease;
-    }
+.proj-tag {
+  display: inline-block;
+  font-size: 10px;
+  font-family: 'Arial', 'Helvetica', sans-serif;
+  background: #e8e8e8;
+  border: 1px solid #ccc;
+  padding: 1px 6px;
+  margin: 1px;
+  color: #333;
+}
 
-    section.project:hover {
-      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-    }
+.loadmore-wrap { text-align: center; padding: 14px 0 2px 0; }
+.loadmore-btn {
+  font-family: 'Arial', 'Helvetica', sans-serif;
+  font-size: 12px;
+  padding: 6px 24px;
+  background: #e0e0e0;
+  border: 2px outset #ccc;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+}
+.loadmore-btn:active { border-style: inset; }
+.loadmore-btn:hover { background: #d0d0d0; }
 
-    .project-content {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-    }
+/* ============================================================
+   CONTACT — three-column info row
+   ============================================================ */
+.contact-box { border: 2px ridge #808080; background: #f5f5f5; padding: 0; }
+.contact-box td {
+  padding: 10px 16px;
+  border-right: 1px solid #ccc;
+}
+.contact-box td:last-child { border-right: none; }
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+}
+.contact-item .lbl {
+  font-family: 'Arial', 'Helvetica', sans-serif;
+  font-size: 10px;
+  text-transform: uppercase;
+  color: #888;
+  font-weight: 700;
+}
 
-    .project-text {
-      flex: 1;
-    }
+/* ============================================================
+   FOOTER — copyright line
+   ============================================================ */
+.footer-cell {
+  background: #dfdfdf;
+  border-top: 2px groove #808080;
+  padding: 8px 20px;
+  text-align: center;
+  font-size: 11px;
+  color: #666;
+  font-family: 'Arial', 'Helvetica', sans-serif;
+}
 
-    .project-image {
-      flex: 1;
-      max-width: 300px;
-    }
+/* ============================================================
+   UTILITY — retro-styled horizontal rule
+   ============================================================ */
+.retro-hr {
+  border: none;
+  border-top: 2px groove #808080;
+  margin: 16px 0;
+}
 
-    .project-image img {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-      object-fit: cover;
-    }
+/* ============================================================
+   MODAL — project detail overlay with gallery + video
+   ============================================================ */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.15s, visibility 0.15s;
+  padding: 20px;
+}
+.modal-overlay.open { opacity: 1; visibility: visible; }
+.modal {
+  background: #fff;
+  border: 4px ridge #808080;
+  max-width: 700px;
+  width: 100%;
+  max-height: 88vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 6px 6px 0 rgba(0,0,0,0.15);
+}
+.modal-close {
+  position: sticky;
+  top: 0;
+  float: right;
+  margin: 8px 8px 0 0;
+  z-index: 10;
+  width: 28px;
+  height: 24px;
+  border: 2px outset #ccc;
+  background: #e0e0e0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: #000;
+  font-family: 'Arial', sans-serif;
+  line-height: 1;
+}
+.modal-close:active { border-style: inset; }
+.modal-content { padding: 16px 20px 20px; }
 
-    section.project h2 {
-      font-size: 1.6rem;
-      color: #222;
-      margin-bottom: 12px;
-    }
+.m-gallery-main {
+  border: 2px ridge #808080;
+  background: #e0e0e0;
+  margin-bottom: 6px;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.m-gallery-main img { width: 100%; height: 100%; object-fit: cover; }
+.m-gallery-thumbs { display: flex; gap: 4px; margin-bottom: 14px; flex-wrap: wrap; }
+.m-gallery-thumbs button {
+  width: 60px;
+  height: 44px;
+  border: 2px outset #ccc;
+  background: #e0e0e0;
+  cursor: pointer;
+  padding: 0;
+  overflow: hidden;
+}
+.m-gallery-thumbs button.active { border-style: inset; border-color: #808080; }
+.m-gallery-thumbs button img { width: 100%; height: 100%; object-fit: cover; }
 
-    section.project p.description {
-      font-size: 1rem;
-      color: #555;
-      margin-bottom: 18px;
-    }
+.modal h2 {
+  font-family: 'Arial', 'Helvetica', sans-serif;
+  font-size: 18px;
+  margin-bottom: 2px;
+}
+.modal .m-meta { font-size: 12px; color: #666; margin-bottom: 8px; }
+.modal .m-tags { margin-bottom: 10px; }
+.modal .m-tag {
+  display: inline-block;
+  font-size: 11px;
+  font-family: 'Arial', 'Helvetica', sans-serif;
+  background: #e8e8e8;
+  border: 1px solid #bbb;
+  padding: 1px 8px;
+  margin: 1px;
+}
+.modal .m-desc { font-size: 13px; color: #222; line-height: 1.7; margin-bottom: 14px; }
+.modal .m-video { margin-bottom: 14px; }
+.modal .m-video iframe,
+.modal .m-video video {
+  width: 100%;
+  border: 2px ridge #808080;
+  display: block;
+}
+.modal .m-links a {
+  display: inline-block;
+  padding: 4px 14px;
+  border: 2px outset #ccc;
+  background: #e8e8e8;
+  font-size: 13px;
+  color: #000;
+  text-decoration: none;
+  margin-right: 6px;
+  font-family: 'Arial', 'Helvetica', sans-serif;
+}
+.modal .m-links a:active { border-style: inset; }
+.modal .m-links a:hover { background: #ddd; text-decoration: none; }
 
-    .btn-download {
-      background-color: #007acc;
-      color: #fff;
-      padding: 10px 18px;
-      border-radius: 25px;
-      font-weight: 600;
-      font-size: 1rem;
-      border: none;
-      cursor: pointer;
-      margin-right: 12px;
-      text-decoration: none;
-      display: inline-block;
-      transition: background-color 0.3s ease;
-    }
-
-    .btn-download:hover {
-      background-color: #005fa3;
-    }
-
-    section.contact {
-      max-width: 600px;
-      margin: 60px auto 0;
-      background-color: #fff;
-      padding: 25px 30px;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      text-align: center;
-    }
-
-    section.contact h2 {
-      font-size: 1.8rem;
-      color: #222;
-      margin-bottom: 15px;
-    }
-
-    section.contact p {
-      font-size: 1.1rem;
-      color: #555;
-      margin-bottom: 10px;
-    }
-
-    section.contact a {
-      color: #007acc;
-      font-weight: 600;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-
-    section.contact a:hover {
-      color: #005fa3;
-    }
-
-    @media (max-width: 768px) {
-      body {
-        padding: 20px 30px;
-      }
-
-      section.project {
-        padding: 20px 25px;
-      }
-
-      .btn-download {
-        margin-bottom: 10px;
-        margin-right: 0;
-        display: block;
-        width: 100%;
-        text-align: center;
-      }
-
-      .project-content {
-        flex-direction: column;
-      }
-
-      .project-image {
-        max-width: 100%;
-        margin-top: 15px;
-      }
-    }
-  </style>
+/* ============================================================
+   RESPONSIVE — tablet and mobile adjustments
+   ============================================================ */
+@media (max-width: 820px) {
+  body { padding: 10px; }
+  .main-table { width: 100%; }
+}
+@media (max-width: 640px) {
+  .projects-table td { display: block; width: 100%; padding: 4px 0; }
+  .skills-table td { display: block; width: 100%; border-right: none; border-bottom: 1px solid #ccc; }
+  .skills-table td:last-child { border-bottom: none; }
+  .contact-box td { display: block; border-right: none; border-bottom: 1px solid #ccc; }
+  .contact-box td:last-child { border-bottom: none; }
+  .stats-box { width: 100%; }
+}
+</style>
 </head>
 <body>
 
-  <header>
-    <h1>Zander Abid</h1>
-    <p>A showcase of my work, skills, and contributions</p>
-  </header>
+<!-- ============================================================
+     MAIN PAGE TABLE — retro fixed-width layout
+     ============================================================ -->
+<table class="main-table">
+<tr><td class="header-cell">
+  <table width="100%">
+  <tr>
+    <td><h1>ZANDER ABID</h1></td>
+    <td style="text-align:right;font-family:Arial,Helvetica,sans-serif;font-size:11px;color:#ccc;white-space:nowrap;">
+      abidzander@example.com &nbsp;|&nbsp; linkedin.com/in/zanderabid &nbsp;|&nbsp; github.com/Excaliabure
+    </td>
+  </tr>
+  </table>
+  <div class="sub">Applied Mathematician &mdash;  &amp; </div>
+</td></tr>
+<tr><td class="nav-cell">
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#contact">Contact</a>
+</td></tr>
+<tr><td class="content">
 
-  <!-- Legend for Acronyms -->
-  <section class="legend">
-    <h3>Acronym Legend</h3>
-    <ul>
-      <li><strong>AIAA</strong> – American Institute of Aeronautics and Astronautics</li>
-      <li><strong>DBF</strong> – Design Build Fly</li>
-      <li><strong>SDL</strong> – Space Dynamics Laboratory</li>
-      <li><strong>ML</strong> – Machine Learning</li>
-      <li><strong>UCM</strong> – University of California, Merced</li>
-    </ul>
-  </section>
+  <!-- ============================================================
+       HERO — tagline and call-to-action links
+       ============================================================ -->
+  <p style="font-size:15px;line-height:1.6;color:#222;margin-bottom:16px;">
+    What's reality?
+    I don't know. 
+    When my bird was looking at my computer monitor I thought, "That bird has no idea what he's looking at."
+    And yet what does the bird do? Does he panic? 
+    No, he can't really panic, he just does the best he can.
+  </p>
+  <p style="margin-bottom:8px;">
+    <a href="#projects" style="font-weight:700;">View my work &raquo;</a>
+    &nbsp;&nbsp;
+    <a href="#contact">Get in touch</a>
+  </p>
+
+  <hr class="retro-hr">
+
+  <!-- ============================================================
+       ABOUT — profile photo, bio, experience stats
+       ============================================================ -->
+  <h2 class="section-title" id="about">About</h2>
+  <p class="section-sub">Me Picture</p>
+  <table class="about-table">
+  <tr>
+    <td colspan="2" style="text-align:left;padding-bottom:16px;">
+      <div class="profile-photo" style="display:inline-block;">
+        <img src="https://picsum.photos/seed/portrait/300/300" alt="Zander Abid"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="ph-text" style="display:none">PHOTO</div>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td style="width:auto">
+      <div class="about-text">
+        <p>
+          Recent Applied Mathematics student. Potential Mathematics Masters Student.
+        </p>
+        <p>
+          Interested in Physics, Guidance Navigation and Controls, Optimization,
+          Aerospace, and more.
+        </p>
+        <p>
+          Experience in mission concepting, orbital analysis, integrated circuits, 
+          full stack development, proposal writing, Mixed Integer Linear Programming and more.
+        </p>
+      </div>
+    </td>
+    <td style="width:auto;padding-left:16px;">
+      <table class="stats-box">
+        
+        <!-- <tr><td><span class="stats-num"></span><span class="stats-lbl">Products launched</span></td></tr> -->
+        <!-- <tr><td><span class="stats-num">8</span><span class="stats-lbl">Patent filings</span></td></tr> -->
+        <!-- <tr><td><span class="stats-num">12</span><span class="stats-lbl">Design awards</span></td></tr> -->
+      </table>
+    </td>
+  </tr>
+  </table>
+
+  <hr class="retro-hr">
+
+  <!-- ============================================================
+       SKILLS — categorized tool/technology grid
+       ============================================================ -->
+  <h2 class="section-title" id="skills">Skills &amp; Tools</h2>
+  <p class="section-sub">Software, methods, and materials I work with.</p>
+  <table class="skills-table">
+  <tr>
+    <td>
+    <div class="skill-cat">Computer </div>
+      <div class="skill-items">
+        Python &bull; C/C++ &bull; MIPS &bull; Excel
+      </div>
+      <div style="margin-top:10px;">
+        <div class="skill-cat">Simulation</div>
+        <div class="skill-items">
+          CFD &bull; SolidWorks &bull; Fusion 360 &bull; ANSYS STK &bull; MATLAB &bull; 
+        </div>
+      </div>
+    </td>
+
+
+
+
+    <td>
+      <div class="skill-cat">Manufacturing</div>
+      <div class="skill-items">
+        Mill &bull; Lathe &bull; Soldering &bull; Drill &bull; Addetive Manufacturing
+      </div>
+      <div style="margin-top:10px;">
+        <div class="skill-cat">Other</div>
+        <div class="skill-items">
+          Proposal Writing &bull; 
+        </div>
+      </div>
+    </td>
+  </tr>
+  </table>
+
+  <hr class="retro-hr">
+
+  <!-- ============================================================
+       PROJECTS — paginated card grid, click for detail modal
+       ============================================================ -->
+  <h2 class="section-title" id="projects">Projects & Experience</h2>
+  <p class="section-sub">CLICK CARD TO EXPAND</p>
+
+  <table class="projects-table" id="projectsGrid"></table>
+  <div class="loadmore-wrap" id="loadMoreWrap" style="display:none">
+    <button class="loadmore-btn" id="loadMoreBtn">Load More &darr;</button>
+  </div>
+
+  <hr class="retro-hr">
+
+  <!-- ============================================================
+       CONTACT — email, LinkedIn, GitHub
+       ============================================================ -->
+  <h2 class="section-title" id="contact">Contact</h2>
+  <!-- <p class="section-sub">Reach out</p> -->
+  <table class="contact-box">
+  <tr>
+    <td><div class="contact-item"><span class="lbl">Email</span> abidzander@gmail.com</div></td>
+    <td><div class="contact-item"><span class="lbl">LinkedIn</span> linkedin.com/in/zanderabid</div></td>
+    <td><div class="contact-item"><span class="lbl">GitHub</span> github.com/Excaliabure</div></td>
+  </tr>
+  </table>
+
+</td></tr>
+<tr><td class="footer-cell">
+  &copy; 2026 Zander Abid &nbsp;|&nbsp; Last updated May 2026
+</td></tr>
+</table>
+
+<!-- ============================================================
+     MODAL OVERLAY — hidden by default, shown via JS
+     ============================================================ -->
+<div class="modal-overlay" id="modal">
+  <div class="modal">
+    <button class="modal-close" id="modalClose">&times;</button>
+    <div class="modal-content" id="modalContent"></div>
+  </div>
+</div>
+
+<script>
+// ============================================================
+// PROJECT DATA — add/remove entries here
+// Fields: title, role, year, tags[], thumb, images[],
+//         desc, details, video (URL or empty), live, gh
+// Doggo: https://picsum.photos/seed/beam1/400/250
+// ============================================================
+
+const projects = [
+
+
+
+
+{
+    title: 'University Nanosatellite Program',
+    role: 'Intern & Project Manager',
+    year: '2025',
+    tags: ['Technical Writing', 'Trade Studies', 'Requirement Writing'],
+    thumb: 'https://picsum.photos/seed/beam1/400/250',
+    images: [
+      'https://picsum.photos/seed/beam1/800/450',
+      'https://picsum.photos/seed/beam2/800/450',
+      'https://picsum.photos/seed/beam3/800/450'
+    ],
+    desc: '',
+    details: '',
+    video: '',
+    live: '',
+    gh: ''
+  },
+
+{
+    title: 'Cube Satellite',
+    role: 'Project Manager & Chief Engineer',
+    year: '2024-2026',
+    tags: ['Technical Writing','Soldering','Solidworks','ArduPilot'],
+    thumb: '/cube-satellite.jpg',
+    images: [
+      'https://picsum.photos/seed/beam1/800/450',
+      'https://picsum.photos/seed/beam2/800/450',
+      'https://picsum.photos/seed/beam3/800/450'
+    ],
+    desc: '',
+    details: '',
+    video: '',
+    live: '',
+    gh: ''
+  },
+
+
+{
+    title: 'Design Build Fly',
+    role: 'Member/Systems Lead',
+    year: '2024-2026',
+    tags: ['Technical Writing','Soldering','Solidworks','ArduPilot'],
+    thumb: 'images/DBFPlane.jpg',
+    images: [
+      'https://picsum.photos/seed/beam1/800/450',
+      'https://picsum.photos/seed/beam2/800/450',
+      'https://picsum.photos/seed/beam3/800/450'
+    ],
+    desc: '',
+    details: '',
+    video: '',
+    live: '',
+    gh: ''
+  },
+
+
+{
+    title: 'Rockets',
+    role: 'Member',
+    year: '2024-2026',
+    tags: ['Technical Writing','Soldering','Solidworks','ArduPilot'],
+    thumb: 'https://picsum.photos/seed/beam1/400/250',
+    images: [
+      'https://picsum.photos/seed/beam1/800/450',
+      'https://picsum.photos/seed/beam2/800/450',
+      'https://picsum.photos/seed/beam3/800/450'
+    ],
+    desc: '',
+    details: '',
+    video: '',
+    live: '',
+    gh: ''
+  },
+
+
+
+
+{
+    title: 'Graph Neural Network Patrolling Problem',
+    role: 'Researcher & Integrator',
+    year: '2023-2024',
+    tags: ['Pytorch', 'Python', 'Jupyter Notebook', 'Rayllib', 'Tensorflow'],
+    thumb: 'https://picsum.photos/seed/beam1/400/250',
+    images: [
+      'https://picsum.photos/seed/beam1/800/450',
+      'https://picsum.photos/seed/beam2/800/450',
+      'https://picsum.photos/seed/beam3/800/450'
+    ],
+    desc: '',
+    details: '',
+    video: '',
+    live: '',
+    gh: ''
+  },
+
+
+
+
+
+{
+    title: 'Overlapping Path Partitions',
+    role: 'Researcher & Integrator',
+    year: '2023-2024',
+    tags: ['Pytorch', 'Python', 'Jupyter Notebook', 'Mixed Integer Linear Programming'],
+    thumb: 'images/OPPGraph.png',
+    images: [
+      'images/OPPGraph.png',
+      'https://picsum.photos/seed/beam2/800/450',
+      'https://picsum.photos/seed/beam3/800/450'
+    ],
+    desc: 'Integrated and fixed a Mixed Integer Linear Program through the usage of optimization libraries for the Multiple Traveline Salesman problem.',
+    details: '',
+    video: '',
+    live: '',
+    gh: ''
+  },
+
+
+
+{
+    title: 'Visibly Hackathon Merced',
+    role: 'Project Manager',
+    year: 'March 2024',
+    tags: ['Pytorch', 'Python', 'Jupyter Notebook', 'React'],
+    thumb: 'https://picsum.photos/seed/beam1/400/250',
+    images: [
+      'https://picsum.photos/seed/beam1/800/450',
+      'https://picsum.photos/seed/beam2/800/450',
+      'https://picsum.photos/seed/beam3/800/450'
+    ],
+    desc: 'Used a multi-modal approach for identifying and diarization of multiple speakers for speech to text classiciation.',
+    details: '',
+    video: '',
+    live: '',
+    gh: ''
+  },
+
+
+{
+    title: 'Water Hackathon Merced',
+    role: 'Technical Lead',
+    year: 'April 2022',
+    tags: ['Pytorch', 'Python', 'Jupyter Notebook', 'Random Forest'],
+    thumb: 'https://picsum.photos/seed/beam1/400/250',
+    images: [
+      'https://picsum.photos/seed/beam1/800/450',
+      'https://picsum.photos/seed/beam2/800/450',
+      'https://picsum.photos/seed/beam3/800/450'
+    ],
+    desc: 'Utilized Machine Learning to find and correct erranious data in Soil Water Equivalence and Root Zone Soil Moisture readings as well as forecast future readings.',
+    details: '',
+    video: '',
+    live: '',
+    gh: ''
+  },
 
 
   
-  <!-- Project 1 -->
-  <section class="project" id="project1">
-    <div class="project-content">
-      <div class="project-text">
-        <h2>University Nanosatellite Program (Space Dynamics Laboratory)</h2>
-        <p class="description">
-          <!-- Add your project description here -->
 
-          Worked on schools Cube Satellite at SDL through a joint partnership with NASA and AFRL.
-
-        </p>
-        <a href="" download class="btn-download">Download Presentation (Pending)</a>
-        <!-- <a href="files\SDL\BOBSAT.zip" download class="btn-download">Download Associated Documents</a> -->
-      </div>
-      <div class="project-image">
-        <img src="images/cube-satellite.jpg" alt="Images Coming Soon" />
-      </div>
-    </div>
-  </section>
-     
-  
-  <!-- Project 2.1 -->
-  <section class="project" id="project3">
-    <div class="project-content">
-      <div class="project-text">
-        <h2>Cube Satellite (AIAA)</h2>
-        <p class="description">
-          Authored proposal for Cube Satellite for UNP Program.  
-        </p>
-         <!-- <a href="files/project-beta-presentation.pdf" download class="btn-download">Download Presentation</a> --> 
-         <!-- <a href="files/project-beta-source.zip" download class="btn-download">Download Source</a> -->
-        <!-- <a href="files/project-beta-readme.txt" download class="btn-download">Download README</a> -->
-        <a href="" target="_blank" rel="noopener" class="btn-download">Simulations (Pending)</a> 
-      </div>
-      <div class="project-image">
-        <img src="images/project-beta-dashboard.png" alt="Images Coming Soon" />
-      </div>
-    </div>
-  </section>
-
-
-
-  <!-- Project 2 -->
-  <section class="project" id="project2">
-    <div class="project-content">
-      <div class="project-text">
-        <h2>Design Build Fly (AIAA)</h2>
-        <p class="description">
-          American Institute of Aeronautics and Asteronautics Design Build Fly Competition 2026
-        </p>
-        <!-- <a href="files/project-beta-presentation.pdf" download class="btn-download">Download Presentation</a> -->
-        <!-- <a href="files/project-beta-source.zip" download class="btn-download">Download Source</a>
-        <a href="files/project-beta-readme.txt" download class="btn-download">Download README</a>
-        <a href="https://github.com/yourusername/project-beta" target="_blank" rel="noopener" class="btn-download">View on GitHub</a> -->
-      </div>
-      <div class="project-image">
-        <img src="images/DBFPlane.jpg" alt="Images Coming Soon" />
-      </div>
-    </div>
-  </section>
 
   
+  {
+    title: 'First Tech Challenge (FTC)',
+    role: 'Pilot & Manufacturer',
+    year: '2015-2018',
+    tags: ['Alloy Casting', 'Piloting', 'Coding', 'Mechanical Assembly'],
+    thumb: 'https://picsum.photos/seed/assembly1/400/250',
+    images: [
+      'https://picsum.photos/seed/assembly1/800/450',
+      'https://picsum.photos/seed/assembly2/800/450'
+    ],
+    desc: 'Participated in the Jhons Adams Middle School FTC. Constructed robots to perform various competition specific tasks for points.',
+    details: '',
+    video: '',
+    live: '',
+    gh: ''
+  }
+];
 
-  <!-- Project 3 -->
-  <section class="project" id="project3">
-    <div class="project-content">
-      <div class="project-text">
-        <h2>Overlapping Path Partitions</h2>
-        <p class="description">
-          Integrated a Mixed Integer Linear Program (Bunch of math statements) to facilitate path optimizations of multiple salesman traveling problem esque.
-        </p>
-        <!-- <a href="files/project-gamma-report.pdf" download class="btn-download">Download Report</a> -->
-        <a href="" target="_blank" rel="noopener" class="btn-download">Go To Code (Pending)</a> 
+// ============================================================
+// DOM REFERENCES
+// ============================================================
+const grid = document.getElementById('projectsGrid');
+const modal = document.getElementById('modal');
+const mContent = document.getElementById('modalContent');
+const mClose = document.getElementById('modalClose');
+const loadWrap = document.getElementById('loadMoreWrap');
+const loadBtn = document.getElementById('loadMoreBtn');
+
+const PAGE_SIZE = 6;
+let renderedCount = 0;
+
+// ============================================================
+// BUILD A SINGLE PROJECT CARD (thumbnail + info)
+// ============================================================
+function buildCard(p) {
+  const initials = p.title.split(' ').map(w => w[0]).slice(0, 2).join('');
+  return `
+    <div class="proj-card" data-id="${p.title}">
+      <div class="proj-thumb">
+        <img src="${p.thumb}" alt="${p.title}" loading="lazy"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="ph" style="display:none">${initials}</div>
       </div>
-      <div class="project-image">
-        <img src="images/OPPGraph.png" alt="Images Coming Soon" />
-      </div>
+      <div class="proj-info">
+        <div class="proj-title">${p.title}</div>
+        <div class="proj-meta">${p.role} &middot; ${p.year}</div>
+        <div class="proj-tags">${p.tags.map(t => `<span class="proj-tag">${t}</span>`).join('')}</div>
+        <div class="proj-sep"> </div>
+        <div class="proj-desc">${p.desc}</div>
+        
     </div>
-  </section>
+  `;
+}
 
+// ============================================================
+// RENDER ROWS — paginated: renders up to `count` projects
+// in rows of 3, pads empty cells, attaches click handlers
+// ============================================================
+function renderRows(count) {
+  const start = renderedCount;
+  const end = Math.min(count, projects.length);
+  if (end <= renderedCount) return;
 
-    <!-- Project 3 -->
-  <section class="project" id="project3">
-    <div class="project-content">
-      <div class="project-text">
-        <h2>Foreign Exchange</h2>
-        <p class="description">
-          Built an environment to allow for training of a reinforcement model to trade and train on environment.
-        </p>
-        <!-- <a href="files/project-gamma-report.pdf" download class="btn-download">Download Report</a> -->
-        <a href="https://github.com/Excaliabure/FinancialGamble/tree/main/Forex/oanda" target="_blank" rel="noopener" class="btn-download">Go To Code</a> 
-      </div>
-      <div class="project-image">
-        <img src="images/ForexImg.png" alt="Images Coming Soon" />
-      </div>
+  let html = '';
+  for (let i = start; i < end; i += 3) {
+    const chunk = projects.slice(i, Math.min(i + 3, end));
+    html += '<tr>';
+    chunk.forEach(p => { html += `<td>${buildCard(p)}</td>`; });
+    // pad empty cells to keep table grid aligned
+    for (let p = chunk.length; p < 3; p++) html += '<td></td>';
+    html += '</tr>';
+  }
+  grid.insertAdjacentHTML('beforeend', html);
+
+  // attach click listeners to new cards
+  const cards = grid.querySelectorAll('.proj-card');
+  for (let i = renderedCount; i < cards.length; i++) {
+    cards[i].addEventListener('click', () => {
+      const title = cards[i].querySelector('.proj-title').textContent;
+      const p = projects.find(pr => pr.title === title);
+      if (p) openModal(p);
+    });
+  }
+
+  renderedCount = end;
+
+  if (renderedCount >= projects.length) {
+    loadWrap.style.display = 'none';
+  } else {
+    loadWrap.style.display = 'block';
+    const remaining = projects.length - renderedCount;
+    loadBtn.textContent = 'Load More (' + remaining + ' remaining)';
+  }
+}
+
+// initial render
+renderRows(PAGE_SIZE);
+
+loadBtn.addEventListener('click', () => {
+  renderRows(renderedCount + 3);
+});
+
+// ============================================================
+// MODAL — opens project detail with image gallery, video,
+// description, and external links
+// ============================================================
+function openModal(p) {
+  const imgs = p.images || [];
+  const hasVideo = p.video && p.video.trim();
+  let idx = 0;
+
+  const gal = imgs.length ? `
+    <div class="m-gallery-main"><img id="mmImg" src="${imgs[0]}" alt=""></div>
+    <div class="m-gallery-thumbs">
+      ${imgs.map((img, i) => `<button class="${i === 0 ? 'active' : ''}" data-i="${i}"><img src="${img}" alt="" loading="lazy"></button>`).join('')}
     </div>
-  </section>
+  ` : '';
 
-    <!-- Project 3 -->
-  <section class="project" id="project3">
-    <div class="project-content">
-      <div class="project-text">
-        <h2>Water Hacks Hackathon</h2>
-        <p class="description">
-          Built and trained a predictive ML model using Python and TensorFlow to detect faulty data and attempt corrections.
-        </p>
-        <!-- <a href="files/project-gamma-report.pdf" download class="btn-download">Download Report</a>  -->
-        <a href="https://colab.research.google.com/drive/1Bi7ojNnW-akuSggTfBwxL_qHJhekeJMy#scrollTo=XfFxl5DNpEjg" target="_blank" rel="noopener" class="btn-download">Go To Code</a> 
-      </div>
-      <div class="project-image">
-        <img src="images/project-gamma-ml.png" alt="Images Coming Soon" />
-      </div>
+  const vid = hasVideo
+    ? (p.video.includes('youtube.com/embed')
+      ? `<div class="m-video"><iframe src="${p.video}" width="100%" height="340" frameborder="0" allowfullscreen loading="lazy"></iframe></div>`
+      : `<div class="m-video"><video src="${p.video}" controls preload="none" width="100%"></video></div>`)
+    : '';
+
+  mContent.innerHTML = `
+    ${gal}
+    <h2>${p.title}</h2>
+    <div class="m-meta">${p.role} &middot; ${p.year}</div>
+    <div class="m-tags">${p.tags.map(t => `<span class="m-tag">${t}</span>`).join(' ')}</div>
+    <p class="m-desc">${p.details || p.desc}</p>
+    ${vid}
+    <div class="m-links">
+      ${p.live ? `<a href="${p.live}" target="_blank" rel="noopener">Live Project</a>` : ''}
+      ${p.gh ? `<a href="${p.gh}" target="_blank" rel="noopener">GitHub</a>` : ''}
     </div>
-  </section>
+  `;
 
-    <!-- Project 3 -->
-  <section class="project" id="project3">
-    <div class="project-content">
-      <div class="project-text">
-        <h2>Kaggle Competitions</h2>
-        <p class="description">
-          Built and trained a predictive ML models using Python and TensorFlow for a variety of challenges. More experimentation with Machine Learning principles and coding. *Note notebooks available on request*
-        </p>
-        <!-- <a href="files/project-gamma-report.pdf" download class="btn-download">Download Report</a>
-        <a href="https://github.com/cdiazalvarenga/overlapping_partition/tree/milp/student_work" target="_blank" rel="noopener" class="btn-download">Go To Code</a> -->
-      </div>
-      <div class="project-image">
-        <img src="images/project-gamma-ml.png" alt="Images Coming Soon" />
-      </div>
-    </div>
-  </section>
+  if (imgs.length > 1) {
+    mContent.querySelector('.m-gallery-thumbs')?.addEventListener('click', (e) => {
+      const btn = e.target.closest('button');
+      if (!btn) return;
+      idx = parseInt(btn.dataset.i);
+      document.getElementById('mmImg').src = imgs[idx];
+      mContent.querySelectorAll('.m-gallery-thumbs button').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    });
+  }
 
-  <!-- Project 3 -->
-  <section class="project" id="project3">
-    <div class="project-content">
-      <div class="project-text">
-        <h2>Visibly Hackathon</h2>
-        <p class="description">
-          Built multimodal model to interpret various speakers interpretation and speech diarization for courtroom setting like speech to text. *Pending compilation of github*
-        </p>
-        <!-- <a href="files/project-gamma-report.pdf" download class="btn-download"></a> -->
-        <a href="https://github.com/Excaliabure/VisiblyHackathon" target="_blank" rel="noopener" class="btn-download">Go To Code (Pending)</a> 
-      </div>
-      <div class="project-image">
-        <img src="images/project-gamma-ml.png" alt="Images Coming Soon" />
-      </div>
-    </div>
-  </section>
+  modal.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
 
-  <!-- Contact Section -->
-  <section class="contact" id="contact">
-    <h2>Contact Me</h2>
-    <p>Email: <a href="mailto:zabid@ucmerced.edu">zabid@ucmerced.edu</a></p>
-    <p>Phone: <a href="tel:+13104868752">+1 (310) 486-8752</a></p>
-    <p>Carrier Pigeon: <a href="https://maps.app.goo.gl/Wn86rh35DjWRnYe3A" target="_blank" rel="noopener">Location</a></p>
-  </section>
+// ============================================================
+// MODAL CLOSE — overlay click, button, or Escape key
+// ============================================================
+function closeModal() {
+  modal.classList.remove('open');
+  document.body.style.overflow = '';
+}
 
+mClose.addEventListener('click', closeModal);
+modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+</script>
 </body>
 </html>
