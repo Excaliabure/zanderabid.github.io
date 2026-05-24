@@ -424,7 +424,15 @@ table { border-collapse: collapse; }
   <tr>
     <td><h1>ZANDER ABID</h1></td>
     <td style="text-align:right;font-family:Arial,Helvetica,sans-serif;font-size:11px;color:#ccc;white-space:nowrap;">
-      abidzander@example.com &nbsp;|&nbsp; linkedin.com/in/zanderabid &nbsp;|&nbsp; github.com/Excaliabure
+      <a href="mailto:abidzander@gmail.com" target="_blank" style="color:#ccc;text-decoration:none;">
+    abidzander@gmail.com
+  </a> &nbsp;|&nbsp;
+   <a href="https://linkedin.com/in/zanderabid" target="_blank" style="color:#ccc;text-decoration:none;">
+    linkedin.com/in/zanderabid 
+  </a>&nbsp;|&nbsp; 
+  <a href="https://github.com/Excaliabure" target="_blank" style="color:#ccc;text-decoration:none;">
+    github.com/Excaliabure
+  </a>
     </td>
   </tr>
   </table>
@@ -465,7 +473,7 @@ table { border-collapse: collapse; }
   <tr>
     <td colspan="2" style="text-align:left;padding-bottom:16px;">
       <div class="profile-photo" style="display:inline-block;">
-        <img src="https://picsum.photos/seed/portrait/300/300" alt="Zander Abid"
+        <img src="files\HEADSHOT\Profile.jpg" alt="Zander Abid"
           onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
         <div class="ph-text" style="display:none">PHOTO</div>
       </div>
@@ -479,20 +487,16 @@ table { border-collapse: collapse; }
         </p>
         <p>
           Interested in Physics, Guidance Navigation and Controls, Optimization,
-          Aerospace, and more.
+          Aerospace, Machine Learning (RL, Deep, Stochastic, etc.) and more.
         </p>
         <p>
           Experience in mission concepting, orbital analysis, integrated circuits, 
-          full stack development, proposal writing, Mixed Integer Linear Programming and more.
+          full stack development, proposal writing, Mixed Integer Linear Programming, Reinfircement Learning, and more.
         </p>
       </div>
     </td>
     <td style="width:auto;padding-left:16px;">
       <table class="stats-box">
-        
-        <!-- <tr><td><span class="stats-num"></span><span class="stats-lbl">Products launched</span></td></tr> -->
-        <!-- <tr><td><span class="stats-num">8</span><span class="stats-lbl">Patent filings</span></td></tr> -->
-        <!-- <tr><td><span class="stats-num">12</span><span class="stats-lbl">Design awards</span></td></tr> -->
       </table>
     </td>
   </tr>
@@ -560,9 +564,26 @@ table { border-collapse: collapse; }
   <!-- <p class="section-sub">Reach out</p> -->
   <table class="contact-box">
   <tr>
-    <td><div class="contact-item"><span class="lbl">Email</span> abidzander@gmail.com</div></td>
-    <td><div class="contact-item"><span class="lbl">LinkedIn</span> linkedin.com/in/zanderabid</div></td>
-    <td><div class="contact-item"><span class="lbl">GitHub</span> github.com/Excaliabure</div></td>
+    <td><div class="contact-item"><span class="lbl">Email</span>
+      <a href="mailto:abidzander@gmail.com" target="_blank" rel="noopener noreferrer">
+      abidzander@gmail.com
+    </a></div></td>
+
+    <td><div class="contact-item"><span class="lbl">LinkedIn</span> 
+      <a href="https://linkedin.com/in/zanderabid" target="_blank" rel="noopener noreferrer">
+      linkedin.com/in/zanderabid
+    </a></div></td>
+
+    <td><div class="contact-item"><span class="lbl">GitHub</span>
+    <a href="https://github.com/Excaliabure" target="_blank" rel="noopener noreferrer">
+      github.com/Excaliabure
+    </a></div></td>
+    
+    <td><div class="contact-item"><span class="lbl">Youtube</span> 
+        <a href="https://www.youtube.com/@ZanderAbid" target="_blank" rel="noopener noreferrer">
+      https://www.youtube.com/@ZanderAbid
+    </a></div></td>
+    
   </tr>
   </table>
 
@@ -592,7 +613,21 @@ table { border-collapse: collapse; }
 
 const projects = [
 
-
+{
+    title: 'FPV & Flight',
+    role: 'Hobby',
+    year: '2026',
+    tags: ['Trade Studies'],
+    thumb: './files/FLITE/FPVHeadset.jpg',
+    images: [
+      './files/FLITE/FPVHeadset.jpg',
+    ],
+    desc: 'Build and obliterate custom airplanes for fun.',
+    details: 'Design unique airplanes through COTS parts. ',
+    video: '',
+    live: '',
+    gh: ''
+  },
 
 
 {
@@ -600,14 +635,16 @@ const projects = [
     role: 'Intern & Project Manager',
     year: '2025',
     tags: ['Technical Writing', 'Trade Studies', 'Requirement Writing'],
-    thumb: 'https://picsum.photos/seed/beam1/400/250',
+    thumb: './files/UNP/SLS.jpg',
     images: [
-      'https://picsum.photos/seed/beam1/800/450',
-      'https://picsum.photos/seed/beam2/800/450',
-      'https://picsum.photos/seed/beam3/800/450'
+      './files/UNP/SLS.jpg',
+      './files/UNP/VAB.jpg',
+      './files/UNP/VABInside.jpg',
+      './files/UNP/FloridaRockets.jpg',
+      './files/UNP/Pod.jpg',
     ],
-    desc: '',
-    details: '',
+    desc: 'Mission Concepting for University of California Merced\'s Cube Satellite program, official guidance from NASA and AFRL.',
+    details: 'Developed mission concepting and core documentation for the University of California Merced\' Cube Satellite program (BOBSAT-1) involved in identifying Potenitally Harmful Algal Blooms (PHABS). Mentorship from Space Dynamics Laboratory (SDL) and NASA folks on core development.',
     video: '',
     live: '',
     gh: ''
@@ -617,16 +654,14 @@ const projects = [
     title: 'Cube Satellite',
     role: 'Project Manager & Chief Engineer',
     year: '2024-2026',
-    tags: ['Technical Writing','Soldering','Solidworks','ArduPilot'],
-    thumb: '/cube-satellite.jpg',
+    tags: ['Technical Writing','ANSYS STK','SolidWorks','Microsoft 365','Stell-Engineering'],
+    thumb: './files/BOBSAT/BOBSATLOGO.png',
     images: [
-      'https://picsum.photos/seed/beam1/800/450',
-      'https://picsum.photos/seed/beam2/800/450',
-      'https://picsum.photos/seed/beam3/800/450'
+      './files/BOBSAT/BOBSATLOGO.png',
     ],
-    desc: '',
+    desc: 'Lead development for core documents and ground work research to be done for misison conceptiong. Performed variuos simulations.',
     details: '',
-    video: '',
+    video: './files/BOBSAT/BOBSATOrbitOptimizer.mp4',
     live: '',
     gh: ''
   },
@@ -637,13 +672,12 @@ const projects = [
     role: 'Member/Systems Lead',
     year: '2024-2026',
     tags: ['Technical Writing','Soldering','Solidworks','ArduPilot'],
-    thumb: 'images/DBFPlane.jpg',
+    thumb: 'files/DBF/DBFPlane.jpg',
     images: [
-      'https://picsum.photos/seed/beam1/800/450',
-      'https://picsum.photos/seed/beam2/800/450',
-      'https://picsum.photos/seed/beam3/800/450'
+      'files/DBF/DBFCompReadiness.jpg',
+      'files/DBF/AMAFieldDay.jpg',
     ],
-    desc: '',
+    desc: 'Developed mini',
     details: '',
     video: '',
     live: '',
@@ -656,11 +690,9 @@ const projects = [
     role: 'Member',
     year: '2024-2026',
     tags: ['Technical Writing','Soldering','Solidworks','ArduPilot'],
-    thumb: 'https://picsum.photos/seed/beam1/400/250',
+    thumb: './files/ROCKETS/ICBM.jpg',
     images: [
-      'https://picsum.photos/seed/beam1/800/450',
-      'https://picsum.photos/seed/beam2/800/450',
-      'https://picsum.photos/seed/beam3/800/450'
+      'files/ROCKETS/ICBM.jpg',
     ],
     desc: '',
     details: '',
@@ -680,8 +712,6 @@ const projects = [
     thumb: 'https://picsum.photos/seed/beam1/400/250',
     images: [
       'https://picsum.photos/seed/beam1/800/450',
-      'https://picsum.photos/seed/beam2/800/450',
-      'https://picsum.photos/seed/beam3/800/450'
     ],
     desc: '',
     details: '',
@@ -699,11 +729,9 @@ const projects = [
     role: 'Researcher & Integrator',
     year: '2023-2024',
     tags: ['Pytorch', 'Python', 'Jupyter Notebook', 'Mixed Integer Linear Programming'],
-    thumb: 'images/OPPGraph.png',
+    thumb: './files/OPP/OPPGraph.png',
     images: [
-      'Wimages/OPPGraph.png',
-      'https://picsum.photos/seed/beam2/800/450',
-      'https://picsum.photos/seed/beam3/800/450'
+      './files/OPP/OPPGraph.png',
     ],
     desc: 'Integrated and fixed a Mixed Integer Linear Program through the usage of optimization libraries for the Multiple Traveline Salesman problem.',
     details: '',
@@ -722,8 +750,6 @@ const projects = [
     thumb: 'https://picsum.photos/seed/beam1/400/250',
     images: [
       'https://picsum.photos/seed/beam1/800/450',
-      'https://picsum.photos/seed/beam2/800/450',
-      'https://picsum.photos/seed/beam3/800/450'
     ],
     desc: 'Used a multi-modal approach for identifying and diarization of multiple speakers for speech to text classiciation.',
     details: '',
@@ -738,11 +764,9 @@ const projects = [
     role: 'Technical Lead',
     year: 'April 2022',
     tags: ['Pytorch', 'Python', 'Jupyter Notebook', 'Random Forest'],
-    thumb: 'https://picsum.photos/seed/beam1/400/250',
+    thumb: './files/WATERSWE/SWEResults.png',
     images: [
-      'https://picsum.photos/seed/beam1/800/450',
-      'https://picsum.photos/seed/beam2/800/450',
-      'https://picsum.photos/seed/beam3/800/450'
+      './files/WATERSWE/SWEResults.png',
     ],
     desc: 'Utilized Machine Learning to find and correct erranious data in Soil Water Equivalence and Root Zone Soil Moisture readings as well as forecast future readings.',
     details: '',
@@ -752,8 +776,6 @@ const projects = [
   },
 
 
-  
-
 
   
   {
@@ -761,10 +783,9 @@ const projects = [
     role: 'Pilot & Manufacturer',
     year: '2015-2018',
     tags: ['Alloy Casting', 'Piloting', 'Coding', 'Mechanical Assembly'],
-    thumb: 'https://picsum.photos/seed/assembly1/400/250',
+    thumb: 'https://picsum.photos/seed/beam1/800/450',
     images: [
-      'https://picsum.photos/seed/assembly1/800/450',
-      'https://picsum.photos/seed/assembly2/800/450'
+      'https://picsum.photos/seed/beam1/800/450',
     ],
     desc: 'Participated in the Jhons Adams Middle School FTC. Constructed robots to perform various competition specific tasks for points.',
     details: '',
